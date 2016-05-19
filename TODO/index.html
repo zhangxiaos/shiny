@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task003</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/fontello.css">
+</head>
+<body>
+	<div class="header">
+		<h1>GTD Tools</h1>
+	</div>
+	<div class="content">
+		<div class="task-type">
+			<h2 id="total" class="on"></h2>
+			<dl class="type-item">
+				<h2>分类列表</h2>
+			</dl>
+			<button class="add" id="add-type">新增分类</button>
+		</div>
+		<div class="task-list">
+			<ul class="sta">
+				<li class="all active" onclick="statusClick(this)">所有</li>
+				<li class="not" onclick="statusClick(this)"><i class="icon-emo-surprised"></i>未完成</li>
+				<li class="already" onclick="statusClick(this)"><i class="icon-emo-grin"></i>已完成</li>
+			</ul>
+			<dl class="list-item"></dl>
+			<button class="add" id="add-task">新增任务</button>
+		</div>
+		<div class="task-detail">
+			<div class="task-title">
+				任务标题：<span></span>
+				<input type="text" class="title" placeholder="请在此输入任务标题">
+				<div class="set">
+					<i class="icon-check" title="完成"></i>
+					<i class="icon-edit" title="编辑"></i>
+				</div>
+			</div>
+			<div class="task-date">
+				任务日期：<span></span>
+				<input type="text" class="date" placeholder="请在此输入任务日期(格式：2016-10-10)">
+			</div>
+			<div class="task-content">
+				<span></span>
+				<textarea class="mytext" placeholder="请在此输入内容"></textarea>
+				<p class="error"></p>
+				<button class="btn cancel">取消</button>
+				<button class="btn save">保存</button>
+			</div>
+		</div>
+	</div>
+	<div id="gray"></div>
+	<div id="pop" style="width:360px;height:200px;">
+        <div class="pop-title">
+            <span></span>新增分类
+        </div>
+        <div class="pop-content">
+        	<p>新分类名称：&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="请在此输入新分类名称"></p>
+        	<p>新分类父节点：
+	        	<select id="fpoint">
+	        		<option value="-1">无</option>
+	        	</select><br>
+	        	<span class="error"></span>
+        	</p>
+        </div>
+        <div class="pop-footer">
+        	<button class="btn no">取消</button>
+        	<button class="btn ok">确定</button>
+        </div>
+    </div>
+	<script src="js/todo.js"></script>
+</body>
+</html>

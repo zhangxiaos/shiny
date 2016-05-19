@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes" >
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>约跑吧</title>
+  <link rel="stylesheet" href="css/main.min.css">
+  <script>
+    (function(doc, win) {
+      var docEl = doc.documentElement,
+      resizeEvt = 'orientationchange' in win ? 'orientationchange' : 'resize',
+      recalc = function () {
+        var clientWidth = docEl.clientWidth;
+        if (!clientWidth) return;
+        if (clientWidth >= 768) {
+           docEl.style.fontSize = 100 * (414 / 320) + 'px';
+          return;
+        }
+        docEl.style.fontSize = 100 * (clientWidth / 320) + 'px';
+      };
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+  </script>
+</head>
+<body>
+  <div class="loading-wrap">
+    <div class="loader loader-ani"></div>
+    <span class="percent">0%</span>
+  </div>
+  <div class="content">
+    <div class="start-wrap"><div class="start" data-url="images/start.png"></div></div>
+    <audio class="audio-source hide" loop="loop" preload="none">
+      <source src="media/ShayneWard-StandByMe.mp3" type="audio/mpeg">
+      <source src="media/ShayneWard-StandByMe.OGG" type="audio/ogg">
+    </audio>
+    <div class="audio-player hide">
+      <img class="play-ipic play-ani" data-src="images/play-ipic.png" src="images/play-ipic.png">
+    </div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <section class="swiper-slide section-01">
+          <div class="bg">
+            <img class="bg-ani" data-ani="zoomIn" data-src="images/sec01-bg.jpg">
+          </div>
+          <div class="widget-info">
+            <img data-ani="bounceInDown delay1" data-src="images/sec01-01.png">
+          </div>
+          <div class="widget-sub">
+            <img class="sub-ani" data-ani="bounceInRight delay3"  data-src="images/sec01-02.png">
+          </div>
+          <div class="widget-ipic">
+            <img class="ipic-ani" data-ani="bounceInLeft delay2"  data-src="images/sec01-03.png">
+          </div>
+          <div class="arrow arrow-ani hide"></div>
+        </section>
+        <section class="swiper-slide section-02">
+          <div class="bg">
+            <img data-src="images/sec02-bg.jpg">
+          </div>
+          <div class="widget widget-info">
+            <img data-ani="zoomIn delay" data-src="images/sec02-01.png">
+          </div>
+        </section>
+        <section class="swiper-slide section-03">
+          <div class="bg">
+            <img data-ani="zoomInBig" data-src="images/sec03-bg.jpg">
+          </div>
+          <div class="widget widget-ani">
+            <img data-ani="bounceInDown delay1" data-src="images/sec03-01.png">
+          </div>
+        </section>
+        <section class="swiper-slide section-04">
+          <div class="bg">
+            <img data-ani="zoomInBig" data-src="images/sec04-bg.jpg">
+          </div>
+          <div class="widget widget-ani">
+            <img data-ani="bounceInRight delay1" data-src="images/sec04-01.png">
+          </div>
+        </section>
+        <section class="swiper-slide section-05">
+          <div class="bg">
+            <img data-ani="zoomInBig" data-src="images/sec05-bg.jpg">
+          </div>
+          <div class="widget widget-ani">
+            <img data-ani="bounceInLeft delay1" data-src="images/sec05-01.png">
+          </div>
+        </section>
+        <section class="swiper-slide section-06">
+          <div class="bg">
+            <img data-ani="zoomInBig" data-src="images/sec06-bg.jpg">
+          </div>
+          <div class="widget widget-ani">
+            <img data-ani="bounceInRight delay1" data-src="images/sec06-01.png">
+          </div>
+        </section>
+        <section class="swiper-slide section-07">
+          <div class="bg">
+            <img data-ani="zoomInBig" data-src="images/sec07-bg.jpg">
+          </div>
+          <div class="widget widget-ani">
+            <img data-ani="bounceInRight delay1" data-src="images/sec07-01.png">
+          </div>
+        </section>
+        <section class="swiper-slide section-08">
+          <div class="bg">
+            <img data-ani="zoomInBig" data-src="images/sec08-bg.jpg">
+          </div>
+          <div class="widget widget-ani">
+            <img data-ani="bounceInDown delay1" data-src="images/sec08-01.png">
+          </div>
+        </section>
+        <section class="swiper-slide section-09">
+          <div class="bg">
+            <img data-ani="zoomInBig" data-src="images/sec09-bg.jpg">
+          </div>
+          <div class="widget widget-ani">
+            <img data-ani="rollIn delay1" data-src="images/sec09-01.png">
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script src="dist/js/main.min.js"></script>
+</body>
+</html>

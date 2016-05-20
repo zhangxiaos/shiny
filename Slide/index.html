@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-<title>mSlider Demo</title>
+<title>Slide Demo</title>
 <style>
   html, body {
     overflow: hidden;
@@ -74,10 +74,10 @@
 </body>
 <script type="text/javascript" src="mSlider.js"></script>
 <script>
-
-var pages = new mSlide({
+console.log(window.Slide);
+var pages = new Slide({
   wrap: document.querySelector('.pages'),
-  type: 'X',
+  type: 'Y',
   onSlideEnd: function(i) {
     console.log(i);
   }
